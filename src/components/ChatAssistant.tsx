@@ -30,9 +30,9 @@ const ChatAssistant = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   
-  // Speech recognition
-  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-  const recognition = SpeechRecognition ? new SpeechRecognition() : null;
+  // Speech recognition with proper type checking
+  const SpeechRecognitionAPI = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = SpeechRecognitionAPI ? new SpeechRecognitionAPI() : null;
   
   if (recognition) {
     recognition.continuous = false;
