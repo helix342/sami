@@ -9,50 +9,53 @@ import Activities from "@/components/Activities";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AnimationObserver from "@/components/AnimationObserver";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      {/* Animation Observer for scroll animations */}
-      <AnimationObserver />
-      
-      {/* Navigation */}
-      <Navigation />
-      
-      {/* Main Content Sections */}
-      <main>
-        <section id="home" className="pt-0">
-          <Hero />
-        </section>
+    <TooltipProvider>
+      <div className="min-h-screen">
+        {/* Animation Observer for scroll animations */}
+        <AnimationObserver />
         
-        <section id="about">
-          <About />
-        </section>
+        {/* Navigation */}
+        <Navigation />
         
-        <section id="education">
-          <Education />
-        </section>
+        {/* Main Content Sections */}
+        <main>
+          <section id="home" className="pt-0">
+            <Hero />
+          </section>
+          
+          <section id="about">
+            <About />
+          </section>
+          
+          <section id="education">
+            <Education />
+          </section>
+          
+          <section id="experience">
+            <Experience />
+          </section>
+          
+          <section id="projects">
+            <Projects />
+          </section>
+          
+          <section id="activities">
+            <Activities />
+          </section>
+          
+          <section id="contact">
+            <Contact />
+          </section>
+        </main>
         
-        <section id="experience">
-          <Experience />
-        </section>
-        
-        <section id="projects">
-          <Projects />
-        </section>
-        
-        <section id="activities">
-          <Activities />
-        </section>
-        
-        <section id="contact">
-          <Contact />
-        </section>
-      </main>
-      
-      {/* Footer */}
-      <Footer />
-    </div>
+        {/* Footer */}
+        <Footer />
+      </div>
+    </TooltipProvider>
   );
 };
 
