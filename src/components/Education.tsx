@@ -1,51 +1,177 @@
 
-import { School } from 'lucide-react';
+import { School, Calendar, Award, GraduationCap } from 'lucide-react';
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 bg-gray-50">
+    <section id="education" className="py-24 bg-portfolio-subtle">
       <div className="container mx-auto px-6">
         <h2 className="section-title animate-on-scroll">Education</h2>
         
-        <div className="mt-12 space-y-12">
-          <div className="bg-white p-6 rounded-lg shadow-sm animate-on-scroll">
-            <div className="flex flex-col md:flex-row md:items-start">
-              <div className="md:mr-6 mb-4 md:mb-0">
-                <div className="bg-portfolio-teal/10 p-4 rounded-full">
-                  <School className="h-8 w-8 text-portfolio-teal" />
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-portfolio-teal/30"></div>
+          
+          <div className="space-y-16">
+            <div className="relative">
+              <div className="flex flex-col md:flex-row items-center md:justify-center">
+                <div className="order-2 md:order-1 md:w-1/2 md:pr-16 md:text-right animate-on-scroll">
+                  <div>
+                    <div className="flex flex-row-reverse md:justify-end items-center mb-2">
+                      <Calendar size={16} className="ml-2 md:mr-2 md:ml-0 text-portfolio-teal" />
+                      <span className="text-portfolio-teal font-medium">June 2022 - June 2026</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-portfolio-navy">B.Tech Artificial Intelligence and Machine Learning</h3>
+                    <p className="text-gray-600 mt-1">Current CGPA: 8.0</p>
+                  </div>
+                  <div className="mt-4 bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-portfolio-teal md:border-l-0 md:border-r-4">
+                    <h4 className="font-medium text-portfolio-navy mb-2">Key Coursework:</h4>
+                    <ul className="space-y-1 text-gray-600 list-disc list-inside">
+                      <li>Object-Oriented Programming</li>
+                      <li>Data Structures & Algorithms</li>
+                      <li>Database Management Systems</li>
+                      <li>Internet Programming</li>
+                      <li>MERN Stack Development</li>
+                      <li>Computer Networks</li>
+                      <li>Machine Learning Fundamentals</li>
+                    </ul>
+                    <div className="mt-3">
+                      <p className="text-gray-600">Developed practical skills in web development through course projects and self-directed learning. Participated in coding competitions and hackathons to enhance problem-solving abilities.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="order-1 md:order-2 z-10 mb-4 md:mb-0">
+                  <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border-4 border-portfolio-teal shadow-lg">
+                    <GraduationCap size={32} className="text-portfolio-teal" />
+                  </div>
+                </div>
+                
+                <div className="order-3 md:w-1/2 md:pl-16 mt-4 md:mt-0">
+                  <div className="bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-all border-l-4 border-portfolio-teal animate-on-scroll">
+                    <h3 className="text-xl font-bold text-portfolio-navy">M.Kumarasamy College of Engineering</h3>
+                    <p className="text-gray-600">Karur, Tamil Nadu</p>
+                    <div className="mt-3">
+                      <h4 className="font-medium text-portfolio-navy mb-2">Achievements:</h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-start">
+                          <Award className="h-5 w-5 text-portfolio-teal mr-2 mt-0.5" />
+                          <span className="text-gray-600">Active member of Google Developer Student Club</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Award className="h-5 w-5 text-portfolio-teal mr-2 mt-0.5" />
+                          <span className="text-gray-600">Participated in 3+ hackathons and coding competitions</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Award className="h-5 w-5 text-portfolio-teal mr-2 mt-0.5" />
+                          <span className="text-gray-600">Completed multiple certified courses in web development</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="flex-1">
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold text-portfolio-navy">M.Kumarasamy College of Engineering</h3>
-                  <span className="text-portfolio-teal font-medium text-sm md:text-base">June 2022 - June 2026</span>
+            </div>
+            
+            <div className="relative">
+              <div className="flex flex-col md:flex-row items-center md:justify-center">
+                <div className="order-2 md:order-1 md:w-1/2 md:pr-16 md:text-right animate-on-scroll animate-delay-2">
+                  <div>
+                    <div className="flex flex-row-reverse md:justify-end items-center mb-2">
+                      <Calendar size={16} className="ml-2 md:mr-2 md:ml-0 text-portfolio-teal" />
+                      <span className="text-portfolio-teal font-medium">Completed June 2022</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-portfolio-navy">Higher Secondary Education</h3>
+                    <p className="text-gray-600 mt-1">Percentage: 75.6%</p>
+                  </div>
+                  <div className="mt-4 bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-portfolio-teal md:border-l-0 md:border-r-4">
+                    <h4 className="font-medium text-portfolio-navy mb-2">Focus Areas:</h4>
+                    <ul className="space-y-1 text-gray-600 list-disc list-inside">
+                      <li>Mathematics</li>
+                      <li>Computer Science</li>
+                      <li>Physics</li>
+                      <li>Chemistry</li>
+                    </ul>
+                    <div className="mt-3">
+                      <p className="text-gray-600">Developed strong foundations in scientific and mathematical principles. Started exploring programming and computer science concepts.</p>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-lg italic mb-2">B.Tech Artificial Intelligence and Machine Learning</p>
-                <p className="text-gray-600 mb-2">Current CGPA: 8.0</p>
-                <div className="mt-4">
-                  <h4 className="font-medium text-portfolio-navy mb-2">Coursework:</h4>
-                  <p className="text-gray-600">
-                    Object-Oriented Programming, Data Structures & Algorithms, Database Management Systems, 
-                    Internet Programming, MERN Stack, Computer Networks
-                  </p>
+                
+                <div className="order-1 md:order-2 z-10 mb-4 md:mb-0">
+                  <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border-4 border-portfolio-teal shadow-lg">
+                    <School size={32} className="text-portfolio-teal" />
+                  </div>
+                </div>
+                
+                <div className="order-3 md:w-1/2 md:pl-16 mt-4 md:mt-0">
+                  <div className="bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-all border-l-4 border-portfolio-teal animate-on-scroll animate-delay-2">
+                    <h3 className="text-xl font-bold text-portfolio-navy">R.K.V Senior Secondary School</h3>
+                    <p className="text-gray-600">Tamil Nadu</p>
+                    <div className="mt-3">
+                      <h4 className="font-medium text-portfolio-navy mb-2">Achievements:</h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-start">
+                          <Award className="h-5 w-5 text-portfolio-teal mr-2 mt-0.5" />
+                          <span className="text-gray-600">Active participant in science exhibitions</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Award className="h-5 w-5 text-portfolio-teal mr-2 mt-0.5" />
+                          <span className="text-gray-600">Member of the school's computer science club</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Award className="h-5 w-5 text-portfolio-teal mr-2 mt-0.5" />
+                          <span className="text-gray-600">Recognized for academic excellence</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        
+        {/* Additional certifications */}
+        <div className="mt-20 animate-on-scroll">
+          <h3 className="text-2xl font-bold text-portfolio-navy mb-8 text-center">Professional Certifications</h3>
           
-          <div className="bg-white p-6 rounded-lg shadow-sm animate-on-scroll animate-delay-2">
-            <div className="flex flex-col md:flex-row md:items-start">
-              <div className="md:mr-6 mb-4 md:mb-0">
-                <div className="bg-portfolio-teal/10 p-4 rounded-full">
-                  <School className="h-8 w-8 text-portfolio-teal" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-xl shadow-sm border-t-4 border-portfolio-teal hover:shadow-md transition-all">
+              <div className="flex items-start">
+                <div className="mr-4 p-3 bg-portfolio-teal/10 rounded-lg text-portfolio-teal">
+                  <Award size={24} />
+                </div>
+                <div>
+                  <h4 className="font-bold text-portfolio-navy mb-1">Full Stack Web Development</h4>
+                  <p className="text-sm text-portfolio-teal mb-2">Udemy | 2023</p>
+                  <p className="text-gray-600 text-sm">Comprehensive training in MERN stack development, covering MongoDB, Express.js, React.js, and Node.js.</p>
                 </div>
               </div>
-              <div className="flex-1">
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold text-portfolio-navy">R.K.V Senior Secondary School</h3>
-                  <span className="text-portfolio-teal font-medium text-sm md:text-base">Completed June 2022</span>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-sm border-t-4 border-portfolio-teal hover:shadow-md transition-all">
+              <div className="flex items-start">
+                <div className="mr-4 p-3 bg-portfolio-teal/10 rounded-lg text-portfolio-teal">
+                  <Award size={24} />
                 </div>
-                <p className="text-gray-600 mb-2">Percentage: 75.6%</p>
+                <div>
+                  <h4 className="font-bold text-portfolio-navy mb-1">Advanced JavaScript</h4>
+                  <p className="text-sm text-portfolio-teal mb-2">Coursera | 2023</p>
+                  <p className="text-gray-600 text-sm">In-depth exploration of JavaScript fundamentals, ES6 features, asynchronous programming, and modern best practices.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-sm border-t-4 border-portfolio-teal hover:shadow-md transition-all">
+              <div className="flex items-start">
+                <div className="mr-4 p-3 bg-portfolio-teal/10 rounded-lg text-portfolio-teal">
+                  <Award size={24} />
+                </div>
+                <div>
+                  <h4 className="font-bold text-portfolio-navy mb-1">Database Design & SQL</h4>
+                  <p className="text-sm text-portfolio-teal mb-2">LinkedIn Learning | 2024</p>
+                  <p className="text-gray-600 text-sm">Comprehensive course on relational database design principles, normalization, and advanced SQL query techniques.</p>
+                </div>
               </div>
             </div>
           </div>

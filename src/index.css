@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -61,6 +61,8 @@
 
   body {
     @apply bg-portfolio-light font-sans text-portfolio-dark;
+    background-image: linear-gradient(to bottom, rgba(248, 250, 255, 0.8), rgba(248, 250, 255, 1));
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -70,7 +72,7 @@
 
 @layer components {
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 text-portfolio-navy relative inline-block;
+    @apply text-3xl md:text-4xl font-bold mb-8 text-portfolio-navy relative inline-block;
   }
   
   .section-title::after {
@@ -93,11 +95,35 @@
   }
 
   .badge {
-    @apply px-3 py-1 text-xs font-medium rounded-full bg-portfolio-teal/10 text-portfolio-teal inline-block mr-2 mb-2;
+    @apply px-3 py-1 text-sm font-medium rounded-full bg-portfolio-teal/10 text-portfolio-teal inline-block mr-2 mb-2 transition-all hover:bg-portfolio-teal/20;
   }
 
   .glass-card {
-    @apply bg-white/80 backdrop-blur-sm shadow-lg rounded-xl border border-white/20 hover:shadow-xl transition-all duration-300;
+    @apply bg-white/90 backdrop-blur-sm shadow-lg rounded-xl border border-white/20 hover:shadow-xl transition-all duration-300;
+  }
+  
+  .feature-card {
+    @apply bg-white rounded-xl shadow-md p-6 border border-portfolio-subtle hover:shadow-lg transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .section-container {
+    @apply py-24 container mx-auto px-6;
+  }
+  
+  .button-primary {
+    @apply px-6 py-3 bg-portfolio-teal text-white font-medium rounded-md hover:bg-portfolio-navy transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1;
+  }
+  
+  .button-secondary {
+    @apply px-6 py-3 bg-white text-portfolio-navy border border-portfolio-navy/20 font-medium rounded-md hover:bg-portfolio-subtle transition-all duration-300 shadow-sm hover:shadow-md;
+  }
+  
+  .section-divider {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-portfolio-teal/30 to-transparent my-6;
+  }
+  
+  .social-icon {
+    @apply p-3 rounded-full transition-all duration-300 text-portfolio-navy hover:text-portfolio-teal hover:bg-portfolio-teal/10;
   }
 }
 
@@ -160,5 +186,93 @@
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+/* Reveal animation */
+.reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.reveal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3EADC8;
+  transform: translateX(-100%);
+  animation: reveal 1.5s ease forwards;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply font-bold;
+  background: linear-gradient(90deg, #2A3B57, #3EADC8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Border glow effect */
+.border-glow {
+  position: relative;
+}
+
+.border-glow::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  background: linear-gradient(90deg, #3EADC8, #6DB6A3, #3EADC8);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.border-glow:hover::before {
+  opacity: 1;
+}
+
+/* Ripple effect */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 1.5s ease-out infinite;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
   }
 }

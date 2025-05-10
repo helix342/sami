@@ -1,12 +1,13 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,8 +68,10 @@ export default function Navigation() {
     >
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center">
-          <a href="#" className="font-display text-2xl font-bold text-portfolio-navy">
-            Syed<span className="text-portfolio-teal">.</span>
+          <a href="#" className="font-display text-2xl font-bold">
+            <span className="text-portfolio-navy">Syed</span>
+            <span className="text-portfolio-teal">.</span>
+            <span className="text-portfolio-purple text-sm ml-2 font-medium">Developer</span>
           </a>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -76,8 +79,48 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('about')} className={navLinkClass('about')}>About</button>
             <button onClick={() => scrollToSection('education')} className={navLinkClass('education')}>Education</button>
             <button onClick={() => scrollToSection('experience')} className={navLinkClass('experience')}>Experience</button>
-            <button onClick={() => scrollToSection('projects')} className={navLinkClass('projects')}>Projects</button>
+            
+            <div className="relative group">
+              <button 
+                onClick={() => setShowDropdown(!showDropdown)}
+                className={cn(
+                  "flex items-center space-x-1",
+                  (activeSection === 'projects' || activeSection === 'activities') 
+                    ? "text-portfolio-teal font-medium" 
+                    : "hover:text-portfolio-teal"
+                )}
+              >
+                <span>Work</span>
+                <ChevronDown size={16} className={cn("transition-transform", showDropdown ? "rotate-180" : "")} />
+              </button>
+              
+              <div className={cn(
+                "absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 transition-all transform origin-top",
+                showDropdown ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
+              )}>
+                <button 
+                  onClick={() => {scrollToSection('projects'); setShowDropdown(false);}}
+                  className="block w-full text-left px-4 py-2 hover:bg-portfolio-subtle"
+                >
+                  Projects
+                </button>
+                <button 
+                  onClick={() => {scrollToSection('activities'); setShowDropdown(false);}}
+                  className="block w-full text-left px-4 py-2 hover:bg-portfolio-subtle"
+                >
+                  Activities
+                </button>
+              </div>
+            </div>
+            
             <button onClick={() => scrollToSection('contact')} className={navLinkClass('contact')}>Contact</button>
+            
+            <a 
+              href="#contact" 
+              className="px-5 py-2 bg-portfolio-teal text-white rounded-md hover:bg-portfolio-navy transition-all duration-300 shadow-md hover:shadow-lg"
+            >
+              Hire Me
+            </a>
           </div>
           
           <div className="md:hidden">
@@ -90,46 +133,60 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       <div className={cn(
-        "md:hidden fixed inset-0 bg-white z-50 transition-transform duration-300 transform",
+        "md:hidden fixed inset-0 bg-white/95 backdrop-blur-lg z-50 transition-transform duration-300 transform",
         isOpen ? "translate-x-0" : "translate-x-full"
       )}>
         <div className="flex flex-col items-center justify-center h-full space-y-8 text-xl">
           <button 
             onClick={() => scrollToSection('home')} 
-            className={cn("font-medium", activeSection === 'home' ? "text-portfolio-teal" : "")}
+            className={cn("font-medium transition-colors", activeSection === 'home' ? "text-portfolio-teal" : "hover:text-portfolio-teal")}
           >
             Home
           </button>
           <button 
             onClick={() => scrollToSection('about')} 
-            className={cn("font-medium", activeSection === 'about' ? "text-portfolio-teal" : "")}
+            className={cn("font-medium transition-colors", activeSection === 'about' ? "text-portfolio-teal" : "hover:text-portfolio-teal")}
           >
             About
           </button>
           <button 
             onClick={() => scrollToSection('education')} 
-            className={cn("font-medium", activeSection === 'education' ? "text-portfolio-teal" : "")}
+            className={cn("font-medium transition-colors", activeSection === 'education' ? "text-portfolio-teal" : "hover:text-portfolio-teal")}
           >
             Education
           </button>
           <button 
             onClick={() => scrollToSection('experience')} 
-            className={cn("font-medium", activeSection === 'experience' ? "text-portfolio-teal" : "")}
+            className={cn("font-medium transition-colors", activeSection === 'experience' ? "text-portfolio-teal" : "hover:text-portfolio-teal")}
           >
             Experience
           </button>
           <button 
             onClick={() => scrollToSection('projects')} 
-            className={cn("font-medium", activeSection === 'projects' ? "text-portfolio-teal" : "")}
+            className={cn("font-medium transition-colors", activeSection === 'projects' ? "text-portfolio-teal" : "hover:text-portfolio-teal")}
           >
             Projects
           </button>
           <button 
+            onClick={() => scrollToSection('activities')} 
+            className={cn("font-medium transition-colors", activeSection === 'activities' ? "text-portfolio-teal" : "hover:text-portfolio-teal")}
+          >
+            Activities
+          </button>
+          <button 
             onClick={() => scrollToSection('contact')} 
-            className={cn("font-medium", activeSection === 'contact' ? "text-portfolio-teal" : "")}
+            className={cn("font-medium transition-colors", activeSection === 'contact' ? "text-portfolio-teal" : "hover:text-portfolio-teal")}
           >
             Contact
           </button>
+          
+          <a 
+            href="#contact" 
+            onClick={() => {scrollToSection('contact'); setIsOpen(false);}}
+            className="px-5 py-2 bg-portfolio-teal text-white rounded-md mt-4"
+          >
+            Hire Me
+          </a>
         </div>
       </div>
     </nav>

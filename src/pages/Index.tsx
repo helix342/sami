@@ -13,29 +13,44 @@ import AnimationObserver from "@/components/AnimationObserver";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      {/* Animation Observer for scroll animations */}
       <AnimationObserver />
+      
+      {/* Navigation */}
       <Navigation />
-      <section id="home">
-        <Hero />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="education">
-        <Education />
-      </section>
-      <section id="experience">
-        <Experience />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="activities">
-        <Activities />
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
+      
+      {/* Main Content Sections */}
+      <main>
+        <section id="home" className="pt-0">
+          <Hero />
+        </section>
+        
+        <section id="about">
+          <About />
+        </section>
+        
+        <section id="education">
+          <Education />
+        </section>
+        
+        <section id="experience">
+          <Experience />
+        </section>
+        
+        <section id="projects">
+          <Projects />
+        </section>
+        
+        <section id="activities">
+          <Activities />
+        </section>
+        
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+      
+      {/* Footer */}
       <Footer />
     </div>
   );
