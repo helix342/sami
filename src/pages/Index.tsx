@@ -9,12 +9,13 @@ import Activities from "@/components/Activities";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AnimationObserver from "@/components/AnimationObserver";
+import ChatAssistant from "@/components/ChatAssistant";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 const Index = () => {
   return (
     <TooltipProvider>
-      <div className="min-h-screen">
+      <div className="min-h-screen overflow-x-hidden">
         {/* Animation Observer for scroll animations */}
         <AnimationObserver />
         
@@ -54,6 +55,9 @@ const Index = () => {
         
         {/* Footer */}
         <Footer />
+        
+        {/* Chat Assistant */}
+        <ChatAssistant />
       </div>
     </TooltipProvider>
   );
