@@ -69,7 +69,7 @@ export default function Navigation() {
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center">
           <a href="#" className="font-display text-2xl font-bold">
-            <span className="text-portfolio-navy">Syed</span>
+            <span className="text-portfolio-navy">Sami</span>
             <span className="text-portfolio-teal">.</span>
             <span className="text-portfolio-purple text-sm ml-2 font-medium">Developer</span>
           </a>
@@ -113,13 +113,11 @@ export default function Navigation() {
               </div>
             </div>
             
-            <button onClick={() => scrollToSection('contact')} className={navLinkClass('contact')}>Contact</button>
-            
             <a 
               href="#contact" 
               className="px-5 py-2 bg-portfolio-teal text-white rounded-md hover:bg-portfolio-navy transition-all duration-300 shadow-md hover:shadow-lg"
             >
-              Hire Me
+              Contact Me
             </a>
           </div>
           
@@ -173,19 +171,13 @@ export default function Navigation() {
           >
             Activities
           </button>
-          <button 
-            onClick={() => scrollToSection('contact')} 
-            className={cn("font-medium transition-colors", activeSection === 'contact' ? "text-portfolio-teal" : "hover:text-portfolio-teal")}
-          >
-            Contact
-          </button>
           
           <a 
             href="#contact" 
             onClick={() => {scrollToSection('contact'); setIsOpen(false);}}
             className="px-5 py-2 bg-portfolio-teal text-white rounded-md mt-4"
           >
-            Hire Me
+            Contact Me
           </a>
         </div>
       </div>

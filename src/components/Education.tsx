@@ -14,7 +14,7 @@ export default function Education() {
           <div className="space-y-16">
             <div className="relative">
               <div className="flex flex-col md:flex-row items-center md:justify-center">
-                <div className="order-2 md:order-1 md:w-1/2 md:pr-16 md:text-right animate-on-scroll">
+                <div className="order-2 md:order-1 md:w-1/2 md:pr-16 md:text-left animate-on-scroll">
                   <div>
                     <div className="flex flex-row-reverse md:justify-end items-center mb-2">
                       <Calendar size={16} className="ml-2 md:mr-2 md:ml-0 text-portfolio-teal" />
@@ -55,11 +55,11 @@ export default function Education() {
                       <ul className="space-y-2">
                         <li className="flex items-start">
                           <Award className="h-5 w-5 text-portfolio-teal mr-2 mt-0.5" />
-                          <span className="text-gray-600">Active member of Google Developer Student Club</span>
+                          <span className="text-gray-600">Member of the College Coding Club – Technology Innovation Hub</span>
                         </li>
                         <li className="flex items-start">
                           <Award className="h-5 w-5 text-portfolio-teal mr-2 mt-0.5" />
-                          <span className="text-gray-600">Participated in 3+ hackathons and coding competitions</span>
+                          <span className="text-gray-600">Volunteered in organizing events as a member of the Google Developer Student Club</span>
                         </li>
                         <li className="flex items-start">
                           <Award className="h-5 w-5 text-portfolio-teal mr-2 mt-0.5" />
@@ -74,7 +74,7 @@ export default function Education() {
             
             <div className="relative">
               <div className="flex flex-col md:flex-row items-center md:justify-center">
-                <div className="order-2 md:order-1 md:w-1/2 md:pr-16 md:text-right animate-on-scroll animate-delay-2">
+                <div className="order-2 md:order-1 md:w-1/2 md:pr-16 md:text-left animate-on-scroll animate-delay-2">
                   <div>
                     <div className="flex flex-row-reverse md:justify-end items-center mb-2">
                       <Calendar size={16} className="ml-2 md:mr-2 md:ml-0 text-portfolio-teal" />
@@ -87,7 +87,6 @@ export default function Education() {
                     <h4 className="font-medium text-portfolio-navy mb-2">Focus Areas:</h4>
                     <ul className="space-y-1 text-gray-600 list-disc list-inside">
                       <li>Mathematics</li>
-                      <li>Computer Science</li>
                       <li>Physics</li>
                       <li>Chemistry</li>
                     </ul>
@@ -112,15 +111,11 @@ export default function Education() {
                       <ul className="space-y-2">
                         <li className="flex items-start">
                           <Award className="h-5 w-5 text-portfolio-teal mr-2 mt-0.5" />
-                          <span className="text-gray-600">Active participant in science exhibitions</span>
+                          <span className="text-gray-600">Participated in Science Exhibitions</span>
                         </li>
                         <li className="flex items-start">
                           <Award className="h-5 w-5 text-portfolio-teal mr-2 mt-0.5" />
-                          <span className="text-gray-600">Member of the school's computer science club</span>
-                        </li>
-                        <li className="flex items-start">
-                          <Award className="h-5 w-5 text-portfolio-teal mr-2 mt-0.5" />
-                          <span className="text-gray-600">Recognized for academic excellence</span>
+                          <span className="text-gray-600">President of the Toastmaster's Club</span>
                         </li>
                       </ul>
                     </div>
@@ -142,9 +137,9 @@ export default function Education() {
                   <Award size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-portfolio-navy mb-1">Full Stack Web Development</h4>
-                  <p className="text-sm text-portfolio-teal mb-2">Udemy | 2023</p>
-                  <p className="text-gray-600 text-sm">Comprehensive training in MERN stack development, covering MongoDB, Express.js, React.js, and Node.js.</p>
+                  <h4 className="font-bold text-portfolio-navy mb-1">Data Analytics Essentials</h4>
+                  <p className="text-sm text-portfolio-teal mb-2">Cisco | 2025</p>
+                  <p className="text-gray-600 text-sm">Gained foundational knowledge of data analytics, including data cleaning, visualization, and basic statistical analysis using industry tools.</p>
                 </div>
               </div>
             </div>
@@ -155,9 +150,9 @@ export default function Education() {
                   <Award size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-portfolio-navy mb-1">Advanced JavaScript</h4>
-                  <p className="text-sm text-portfolio-teal mb-2">Coursera | 2023</p>
-                  <p className="text-gray-600 text-sm">In-depth exploration of JavaScript fundamentals, ES6 features, asynchronous programming, and modern best practices.</p>
+                  <h4 className="font-bold text-portfolio-navy mb-1">Machine Learning and Deep Learning</h4>
+                  <p className="text-sm text-portfolio-teal mb-2">NPTEL | 2024</p>
+                  <p className="text-gray-600 text-sm">Covered supervised and unsupervised learning, neural networks, deep learning models, and real-world applications using Python and frameworks like TensorFlow.</p>
                 </div>
               </div>
             </div>
@@ -168,9 +163,9 @@ export default function Education() {
                   <Award size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-portfolio-navy mb-1">Database Design & SQL</h4>
-                  <p className="text-sm text-portfolio-teal mb-2">LinkedIn Learning | 2024</p>
-                  <p className="text-gray-600 text-sm">Comprehensive course on relational database design principles, normalization, and advanced SQL query techniques.</p>
+                  <h4 className="font-bold text-portfolio-navy mb-1">SQL & Relational Databases</h4>
+                  <p className="text-sm text-portfolio-teal mb-2">IBM | 2025</p>
+                  <p className="text-gray-600 text-sm">Studied relational database concepts, schema design, normalization, and advanced SQL for data retrieval, aggregation, and performance tuning.</p>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react';
-import { Code, Server, Layout, Database, Lightbulb, Users } from 'lucide-react';
+import { Code, Server, Layout, Database, Cloud, Users } from 'lucide-react';
 
 interface SkillCardProps {
   icon: React.ReactNode;
@@ -44,7 +44,7 @@ export default function About() {
     <section id="about" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <h2 className="section-title animate-on-scroll">About Me</h2>
-        
+
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-6 animate-on-scroll">
             <p className="text-lg text-gray-600 leading-relaxed">
@@ -56,7 +56,7 @@ export default function About() {
             <p className="text-lg text-gray-600 leading-relaxed">
               I enjoy solving complex problems and building innovative applications that make a difference. My experience spans from full-stack development to AI systems, and I'm constantly exploring new technologies to enhance my skillset.
             </p>
-            
+
             <div className="pt-4">
               <h3 className="text-xl font-bold text-portfolio-navy mb-4">What I Offer:</h3>
               <ul className="space-y-2 text-gray-600">
@@ -74,20 +74,16 @@ export default function About() {
                 </li>
                 <li className="flex items-center">
                   <span className="mr-2 text-portfolio-teal">✓</span>
-                  <span>AI/ML integration in web applications</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2 text-portfolio-teal">✓</span>
                   <span>Database design and optimization</span>
                 </li>
               </ul>
             </div>
           </div>
-          
+
           <div className="animate-on-scroll animate-delay-1">
             <div className="bg-portfolio-subtle p-8 rounded-xl shadow-sm">
               <h3 className="font-bold text-xl mb-6 text-portfolio-navy">Skills & Expertise</h3>
-              
+
               <div className="space-y-6">
                 <div>
                   <div className="flex justify-between mb-1">
@@ -98,17 +94,17 @@ export default function About() {
                     <div className="h-2 bg-portfolio-teal rounded-full w-[90%]"></div>
                   </div>
                 </div>
-                
+
                 <div>
                   <div className="flex justify-between mb-1">
                     <h4 className="font-medium text-portfolio-navy">Back-End Development</h4>
-                    <span className="text-portfolio-teal font-medium">85%</span>
+                    <span className="text-portfolio-teal font-medium">75%</span>
                   </div>
                   <div className="h-2 bg-gray-200 rounded-full">
-                    <div className="h-2 bg-portfolio-teal rounded-full w-[85%]"></div>
+                    <div className="h-2 bg-portfolio-teal rounded-full w-[75%]"></div>
                   </div>
                 </div>
-                
+
                 <div>
                   <div className="flex justify-between mb-1">
                     <h4 className="font-medium text-portfolio-navy">Database Management</h4>
@@ -118,20 +114,20 @@ export default function About() {
                     <div className="h-2 bg-portfolio-teal rounded-full w-[80%]"></div>
                   </div>
                 </div>
-                
+
                 <div>
                   <div className="flex justify-between mb-1">
-                    <h4 className="font-medium text-portfolio-navy">AI/ML Implementation</h4>
-                    <span className="text-portfolio-teal font-medium">75%</span>
+                    <h4 className="font-medium text-portfolio-navy">Hosting and Deployment</h4>
+                    <span className="text-portfolio-teal font-medium">70%</span>
                   </div>
                   <div className="h-2 bg-gray-200 rounded-full">
-                    <div className="h-2 bg-portfolio-teal rounded-full w-[75%]"></div>
+                    <div className="h-2 bg-portfolio-teal rounded-full w-[70%]"></div>
                   </div>
                 </div>
               </div>
-              
+
               <div className="section-divider my-8"></div>
-              
+
               <h4 className="font-medium text-gray-700 mb-3">Languages & Technologies</h4>
               <div className="flex flex-wrap mb-6">
                 <span className="badge">Python</span>
@@ -148,53 +144,52 @@ export default function About() {
                 <span className="badge">MongoDB</span>
                 <span className="badge">MySQL</span>
                 <span className="badge">Git</span>
-                <span className="badge">REST API</span>
-                <span className="badge">TailwindCSS</span>
+                <span className="badge">BootStrap</span>
               </div>
-              
+
               <div className="text-center mt-8">
                 <a href="#contact" className="button-primary inline-flex">Get in Touch</a>
               </div>
             </div>
           </div>
         </div>
-        
+
         {/* My Services */}
         <div className="mt-20">
           <h3 className="text-2xl font-bold text-portfolio-navy mb-8 text-center">My Services</h3>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <SkillCard 
+            <SkillCard
               icon={<Layout size={24} />}
               title="Front-End Development"
-              description="Creating responsive, interactive user interfaces using modern frameworks like React and styling with TailwindCSS."
+              description="Creating responsive, interactive user interfaces using modern frameworks like React and styling with BootStrap ."
             />
-            
-            <SkillCard 
+
+            <SkillCard
               icon={<Server size={24} />}
               title="Back-End Development"
               description="Building robust server-side applications with Node.js, Express, and PHP/Laravel to power your web applications."
             />
-            
-            <SkillCard 
+
+            <SkillCard
               icon={<Database size={24} />}
               title="Database Design"
               description="Designing efficient database schemas and implementing data management solutions using MySQL and MongoDB."
             />
-            
-            <SkillCard 
+
+            <SkillCard
               icon={<Code size={24} />}
               title="Full-Stack Solutions"
               description="End-to-end web application development with seamless integration between front-end and back-end components."
             />
-            
-            <SkillCard 
-              icon={<Lightbulb size={24} />}
-              title="AI/ML Integration"
-              description="Incorporating artificial intelligence and machine learning models into web applications for enhanced functionality."
+
+            <SkillCard
+              icon={<Cloud size={24} />}
+              title="Hosting and Deployment"
+              description="Deploying web applications to cloud platforms with CI/CD pipelines, domain setup, and performance optimization for reliable user access."
             />
-            
-            <SkillCard 
+
+            <SkillCard
               icon={<Users size={24} />}
               title="Collaborative Development"
               description="Working with teams to deliver high-quality software solutions that meet business requirements and user needs."
